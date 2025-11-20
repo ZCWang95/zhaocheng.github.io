@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal academic website of Dr. Zhaocheng Wang, Hydrologist and Research Scientist at Arizona State University.">
+    <title>Zhaocheng Wang | Hydrologist & Research Scientist</title>
+    <style>
+        :root {
+            --primary-color: #8C1D40; /* ASU Maroon */
+            --secondary-color: #FFC627; /* ASU Gold */
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --bg-light: #ffffff;
+            --bg-off-white: #f4f4f4;
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 60px 20px;
+            background-color: var(--bg-off-white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder color */
+            border: 4px solid var(--primary-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h2 {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #5c122a;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* About */
+        .about p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Education */
+        .timeline-item {
+            margin-bottom: 25px;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 20px;
+        }
+
+        .timeline-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .timeline-degree {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .timeline-school {
+            font-style: italic;
+        }
+
+        /* Publications */
+        .publication {
+            margin-bottom: 20px;
+            background: var(--bg-off-white);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .pub-title {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .pub-journal {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero-content {
+                flex-direction: row;
+                text-align: left;
+            }
+            .hero h1 {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Zhaocheng Wang</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Placeholder for profile image. Replace 'profile.jpg' with actual image file -->
+            <img src="https://via.placeholder.com/200?text=ZW" alt="Zhaocheng Wang" class="profile-img">
+            <div>
+                <h1>Dr. Zhaocheng Wang</h1>
+                <h2>Research Scientist | Center for Hydrologic Innovations</h2>
+                <h2>Arizona State University</h2>
+                <a href="#contact" class="btn">Get in Touch</a>
+                <a href="https://scholar.google.com/citations?user=AUZIYQFe_kU8a_KW1dcra1HJGb_pR4xJMujqrPpG6rpIEz1YodCq8ayvudWGGle5r1Wnk7KnnFNy6rhKLVZHCkK09ATwUQUy-6IF8lt_gHqycW6aTJjyjccgQTN2aGPe-4H_3rtk67iVkMThl0F0Bhpi8YoEgoykVisVPH2R" class="btn" target="_blank" style="background-color: #4285F4;">Google Scholar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a Research Scientist at the Center for Hydrologic Innovations at Arizona State University (ASU). 
+            My research focuses on understanding hydrological processes in both natural and urban environments and 
+            their interactions with ecological and climatic systems.
+        </p>
+        <p>
+            I specialize in combining ground observations, remote sensing datasets (from traditional satellites 
+            and CubeSat constellations), and regional hydrologic models to advance water sustainability and resilience. 
+            My recent work involves high-performance computing applications for modeling dryland hydrologic changes 
+            and flash flood hazards.
+        </p>
+
+        <h3>Education</h3>
+        <div class="timeline-item">
+            <div class="timeline-degree">Ph.D. in Civil, Environmental and Sustainable Engineering</div>
+            <div class="timeline-school">Arizona State University, Tempe, AZ</div>
+            <div class="timeline-date">2023</div>
+            <p>Thesis: Innovations in Detecting and Modeling Dryland Hydrologic Changes</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-degree">M.S.E. in Civil, Environmental and Sustainable Engineering</div>
+            <div class="timeline-school">Arizona State University, Tempe, AZ</div>
+            <div class="timeline-date">2020</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-degree">B.Eng. in Water Supply and Drainage Engineering</div>
+            <div class="timeline-school">Hunan University, China</div>
+            <div class="timeline-date">2017</div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section id="research">
+        <h2 class="section-title">Research Interests</h2>
+        <ul>
+            <li><strong>Hydrologic Modeling:</strong> Regional and distributed modeling of watershed systems.</li>
+            <li><strong>Remote Sensing:</strong> Utilizing CubeSats and satellite data for streamflow detection and flood mapping.</li>
+            <li><strong>Urban Ecohydrology:</strong> Analyzing irrigation cooling capacities and water conservation in urban settings.</li>
+            <li><strong>Water Sustainability:</strong> Climate change impacts on water resources, specifically in the Colorado River Basin.</li>
+        </ul>
+        
+        <br>
+        <h3>Honors & Awards</h3>
+        <div class="timeline-item">
+            <div class="timeline-degree">Paul F. Boulos Excellence in Computational Hydraulics/Hydrology Award</div>
+            <div class="timeline-school">American Academy of Environmental Engineers and Scientists</div>
+            <div class="timeline-date">2023</div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <h2 class="section-title">Selected Publications</h2>
+        
+        <div class="publication">
+            <div class="pub-title">Detecting Streamflow in Dryland Rivers using CubeSats</div>
+            <div class="pub-authors">Wang, Z., & Vivoni, E.R.</div>
+            <div class="pub-journal">Geophysical Research Letters, 2022</div>
+        </div>
+
+        <div class="publication">
+            <div class="pub-title">Mapping Flash Flood Hazards in Arid Regions using CubeSats</div>
+            <div class="pub-authors">Wang, Z., & Vivoni, E.R.</div>
+            <div class="pub-journal">Remote Sensing, 2022</div>
+        </div>
+
+        <div class="publication">
+            <div class="pub-title">Individualized and Combined Effects of Future Urban Growth and Climate Change on Irrigation Water Use in Central Arizona</div>
+            <div class="pub-authors">Wang, Z., & Vivoni, E.R.</div>
+            <div class="pub-journal">Journal of the American Water Resources Association, 2022</div>
+        </div>
+
+        <div class="publication">
+            <div class="pub-title">A Multiyear Assessment of Irrigation Cooling Capacity in Agricultural and Urban Settings of Central Arizona</div>
+            <div class="pub-authors">Wang, Z., Vivoni, E.R., Bohn, T.J., & Wang, Z-H.</div>
+            <div class="pub-journal">Journal of the American Water Resources Association, 2021</div>
+        </div>
+
+        <div class="publication">
+            <div class="pub-title">Abiotic Mechanisms Drive Enhanced Evaporative Losses under Urban Oasis Conditions</div>
+            <div class="pub-authors">Vivoni, E. R., Kindler, M., Wang, Z., & Pérez‐Ruiz, E. R.</div>
+            <div class="pub-journal">Geophysical Research Letters, 2020</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> zhaocheng@asu.edu</p>
+            <p><strong>Address:</strong><br>
+            Center for Hydrologic Innovations<br>
+            Arizona State University<br>
+            Tempe, AZ 85287, USA</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Zhaocheng Wang. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
